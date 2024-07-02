@@ -1,0 +1,240 @@
+html {
+    overflow-y: scroll;
+}
+
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    margin: 0.1em 0; /* 0.5em */
+    margin-left: 20px;
+    text-align: left; /* This will center the contents of the h1 tag */
+}
+
+header h1 img {
+    max-width: 30%; /* This ensures the image is responsive and fits within its container */
+    height: auto; /* This maintains the aspect ratio of the image 
+    display: inline-block; /* This allows text-align center to work on the image */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space between logo and nav */
+    align-items: center; /* Center items vertically */
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    align-items: center; /* Center items vertically if your nav has multiple lines */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Work Sans', sans-serif; /* Using the imported Work Sans font */
+    font-size: 0.75em;
+    white-space: nowrap; 
+}
+
+#banner img {
+    max-width: 100%; /* This ensures the image is responsive and fits within its container */
+    height: auto;
+    margin-bottom: 100px
+}
+
+h1 {
+    font-size: 3em;
+    margin-top: 0.5em;
+}
+
+main {
+    background: #fff;
+}
+
+.linked-images {
+    text-align: center
+}
+
+.linked-images a {
+    /* display: inline-block*/
+    margin-right: 30px;  /* Adds space between the images */
+
+    text-decoration: none;
+    color: #000;
+    font-family: 'Work Sans', sans-serif; /* Using the imported Work Sans font */
+    font-size: 0.75em;
+}
+
+/* Removes margin from the last image */
+
+.linked-images a:last-child {
+    margin-right: 0;  
+}
+
+.linked-images img {
+    max-width: 25%; 
+    height: auto;
+}
+
+/*
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-center-w40 {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height: auto;
+}
+*/
+
+#about {
+/*    padding: 100px;*/
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.85em;
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px
+}
+
+.role {
+    margin-bottom: 0px;
+}
+
+.role h3 {
+    font-size: 1.5em;
+    color: #000;
+    margin-bottom: 5px;
+    font-family: 'Work Sans', sans-serif; /* Using the imported Work Sans font */
+}
+
+.role p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+    font-family: 'Work Sans', sans-serif;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 100px
+}
+
+footer img {
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+}
+
+/* ...previous CSS... */
+
+footer img {
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+}
+
+/* Additional Styles */
+
+h2 {
+    padding-top: 100px;
+    text-align: center
+}
+
+h2 img {
+    max-width: 90%; /* This ensures the image is responsive and fits within its container */
+    height: auto; /* This maintains the aspect ratio of the image 
+    display: inline-block; /* This allows text-align center to work on the image */
+}
+
+
+/*DELETE LATER?
+
+/* Utility classes for images to be used in HTML */
+.img-placeholder {
+    background-color: #ccc;
+    width: 100%; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    display: block;
+    color: #333;
+    text-align: center;
+    line-height: 200px; /* Same as height to center text vertically */
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+    }
+
+    .role {
+        padding: 10px;
+    }
+}
+*/
+
+.photos-content {
+    text-align: center;
+}
+
+.photos-content img {
+    display: block;
+    margin: 10px auto;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* This creates space between the images */
+    margin-top: 10px; /* This adds space above the images */
+    margin-bottom: 30px;
+}
+
+.side-by-side-image {
+    width: 30%; /* Adjust this value to control image size */
+    max-width: 500px; /* Optional: set a maximum width for larger screens */
+    height: auto;
+}
+
+.centered-image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Adds space between the top images and the centered image */
+    margin-bottom: 30px;
+}
+
+.centered-image {
+    width: 50%; /* Adjust this value to control the size of the centered image */
+    max-width: 800px; /* Optional: set a maximum width for larger screens */
+    height: auto;
+}

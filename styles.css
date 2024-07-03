@@ -199,22 +199,45 @@ h2 img {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* This creates space between the images */
-    margin-top: 10px; /* This adds space above the images */
+    gap: 30px;
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 
 .side-by-side-image {
-    width: 30%; /* Adjust this value to control image size */
-    max-width: 500px; /* Optional: set a maximum width for larger screens */
+    width: 30%;
+    max-width: 500px;
     height: auto;
 }
 
 .centered-image-container {
     display: flex;
     justify-content: center;
-    margin-top: 30px; /* Adds space between the top images and the centered image */
+    margin-top: 30px;
     margin-bottom: 30px;
+}
+
+.centered-image {
+    width: 50%;
+    max-width: 800px;
+    height: auto;
+}
+
+@media screen and (max-width: 480px) {
+    .image-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .side-by-side-image,
+    .centered-image {
+        width: 100%;
+        max-width: none;
+    }
+
+    .centered-image-container {
+        margin-top: 20px;
+    }
 }
 
 .centered-image {

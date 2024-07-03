@@ -227,7 +227,7 @@ h2 img {
     display: flex;
     justify-content: center;
     margin-top: 30px; /* Adds space between the top images and the centered image */
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .about-centered-image {

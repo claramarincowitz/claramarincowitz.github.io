@@ -223,29 +223,6 @@ h2 img {
     height: auto;
 }
 
-@media screen and (max-width: 480px) {
-    .image-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .side-by-side-image,
-    .centered-image {
-        width: 100%;
-        max-width: none;
-    }
-
-    .centered-image-container {
-        margin-top: 20px;
-        width: 100%;
-    }
-
-    /* New rule to override the original width for centered-image */
-    .centered-image-container .centered-image {
-        width: 100%;
-    }
-}
-
 .centered-image {
     width: 50%; /* Adjust this value to control the size of the centered image */
     max-width: 800px; /* Optional: set a maximum width for larger screens */
@@ -277,4 +254,55 @@ h2 img {
 .centered-text p {
     max-width: 600px; /* Adjust this value to your desired width */
     padding: 0 50px; /* This adds some padding on the sides */
+}
+
+@media screen and (max-width: 480px) {
+    .image-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .side-by-side-image,
+    .centered-image {
+        width: 100%;
+        max-width: none;
+    }
+
+    .centered-image-container {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    /* New rule to override the original width for centered-image */
+    .centered-image-container .centered-image {
+        width: 100%;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    header h1 img {
+        max-width: 80%;
+        min-width: 150px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
 }

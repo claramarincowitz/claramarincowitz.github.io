@@ -224,8 +224,7 @@ h2 img {
 }
 
 @media screen and (max-width: 480px) {
-    .image-container,
-    .centered-image-container {
+    .image-container {
         flex-direction: column;
         gap: 20px;
     }
@@ -236,6 +235,15 @@ h2 img {
         max-width: none;
     }
 
+    .centered-image-container {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    /* New rule to override the original width for centered-image */
+    .centered-image-container .centered-image {
+        width: 100%;
+    }
 }
 
 .centered-image {

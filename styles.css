@@ -73,11 +73,6 @@ main {
 .linked-images a {
     /* display: inline-block*/
     margin-right: 30px;  /* Adds space between the images */
-
-    text-decoration: none;
-    color: #000;
-    font-family: 'Work Sans', sans-serif; /* Using the imported Work Sans font */
-    font-size: 0.75em;
 }
 
 /* Removes margin from the last image */
@@ -90,20 +85,6 @@ main {
     max-width: 25%; 
     height: auto;
 }
-
-/*
-.flex-center {
-    display: flex;
-    justify-content: center;
-}
-
-.flex-center-w40 {
-    display: flex;
-    justify-content: center;
-    width: 40%;
-    height: auto;
-}
-*/
 
 .role {
     margin-bottom: 0px;
@@ -195,6 +176,8 @@ h2 img {
     margin: 10px auto;
 }
 
+/* photo pages text and image formatting */
+
 .image-container {
     display: flex;
     justify-content: center;
@@ -229,10 +212,12 @@ h2 img {
     height: auto;
 }
 
+/* about page text and image formatting */
+
 .about-centered-image-container {
     display: flex;
     justify-content: center;
-    margin-top: 30px; /* Adds space between the top images and the centered image */
+    margin-top: 80px; /* Adds space between the top images and the centered image */
     margin-bottom: 80px;
 }
 
@@ -248,12 +233,12 @@ h2 img {
     align-items: center;
     font-family: 'Work Sans', sans-serif;
     font-size: 0.9em;
-    text-align: justify; /* This justifies the text */
+    text-align: center; 
 }
 
 .centered-text p {
     max-width: 600px; /* Adjust this value to your desired width */
-    padding: 0 50px; /* This adds some padding on the sides */
+    padding: 0 400px; /* This adds some padding on the sides */
 }
 
 @media screen and (max-width: 768px) {
@@ -290,6 +275,7 @@ h2 img {
     header h1 {
         margin: 10px 0;
         text-align: center;
+        margin-bottom: 0px;
     }
 
     header h1 img {
@@ -317,4 +303,64 @@ h2 img {
         font-size: 0.6em;
         padding: 5px 3px;
     }
+    
+/* changes display for country links in mobile site */
+    
+    .linked-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .linked-images a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .linked-images img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+/* changes display for banners in mobile site */
+    #banner img {
+        max-width: 100%; /* This ensures the image is responsive and fits within its container */
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    
+/* changes display for about content in mobile site */
+    
+    .about-centered-image-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; /* Adds space between the top images and the centered image */
+        margin-bottom: 80px;
+    }
+
+    .about-centered-image {
+        width: 100%; /* Adjust this value to control the size of the centered image */
+        max-width: 800px; /* Optional: set a maximum width for larger screens */
+        height: auto;
+    }
+
+    .centered-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 0.6em;
+        text-align: justify; /* This justifies the text */
+    }
+
+    .centered-text p {
+        max-width: 600px; /* Adjust this value to your desired width */
+        padding: 0 50px; /* This adds some padding on the sides */    
+    }
+
 }
+    

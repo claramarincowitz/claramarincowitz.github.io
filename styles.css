@@ -238,3 +238,11 @@ h2 img {
     max-width: 800px; /* Optional: set a maximum width for larger screens */
     height: auto;
 }
+
+.centered-text {
+    display: flex;
+    justify-content: center;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.9em;
+    text-align: center;
+}

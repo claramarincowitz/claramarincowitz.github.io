@@ -247,21 +247,21 @@ h2 img {
     
     .image-container {
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
+        margin-top: 10px;
+        margin-bottom: 0px;
     }
-
-    .side-by-side-image,
-    .centered-image {
-        width: 100%;
-        max-width: none;
-    }
-
+    
     .centered-image-container {
-        margin-top: 20px;
+        margin-top: 10px; /* Adds space between the top images and the centered image */
+        margin-bottom: 0px;
+    }
+    
+    .side-by-side-image {
         width: 100%;
     }
-
-    .centered-image-container .centered-image {
+    
+    .centered-image {
         width: 100%;
     }
     
@@ -330,7 +330,7 @@ h2 img {
         max-width: 100%; /* This ensures the image is responsive and fits within its container */
         height: auto;
         margin-top: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     
 /* changes display for about content in mobile site */
@@ -343,7 +343,7 @@ h2 img {
     }
 
     .about-centered-image {
-        width: 100%; /* Adjust this value to control the size of the centered image */
+        width: 50%; /* Adjust this value to control the size of the centered image */
         max-width: 800px; /* Optional: set a maximum width for larger screens */
         height: auto;
     }

@@ -256,7 +256,10 @@ h2 img {
     padding: 0 50px; /* This adds some padding on the sides */
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
+    
+/*Displays photos on mobile site underneath each other */
+    
     .image-container {
         flex-direction: column;
         gap: 20px;
@@ -273,10 +276,11 @@ h2 img {
         width: 100%;
     }
 
-    /* New rule to override the original width for centered-image */
     .centered-image-container .centered-image {
         width: 100%;
     }
+    
+/* Changes display for logo and navbar in mobile site */
     
     .header-content {
         flex-direction: column;
@@ -295,14 +299,22 @@ h2 img {
 
     nav {
         width: 100%;
+        overflow-x: auto;
     }
 
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+        width: 100%;
     }
 
     nav ul li {
-        margin: 5px 0;
+        margin: 0 5px;
+    }
+
+    nav ul li a {
+        font-size: 0.6em;
+        padding: 5px 3px;
     }
 }

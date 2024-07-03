@@ -237,6 +237,7 @@ h2 img {
 
     .centered-image-container {
         margin-top: 20px;
+        width: 100%;
     }
 }
 

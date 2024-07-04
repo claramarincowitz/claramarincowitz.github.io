@@ -305,7 +305,8 @@ h2 img {
     
     .image-wrapper {
         width: 100% !important;
-        display: block;
+        display: flex;
+        justify-content: center;
     }
 
     .tooltip {

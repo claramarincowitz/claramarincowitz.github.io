@@ -176,7 +176,7 @@ h2 img {
     margin: 10px auto;
 }
 
-/* photo pages text and image formatting */
+/* photo pages image formatting */
 
 .image-container {
     display: flex;
@@ -206,10 +206,46 @@ h2 img {
     height: auto;
 }
 
-.centered-image {
-    width: 50%; /* Adjust this value to control the size of the centered image */
-    max-width: 800px; /* Optional: set a maximum width for larger screens */
+/* Tooltip styles */
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 30%; /* Match the width of side-by-side-image */
+}
+
+.centered-image-container .image-wrapper {
+    width: 50%; /* Match the width of centered-image */
+}
+
+.image-wrapper img {
+    width: 100%;
     height: auto;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.image-wrapper:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* about page text and image formatting */
@@ -263,6 +299,17 @@ h2 img {
     
     .centered-image {
         width: 100%;
+    }
+    
+/* remove tooltip from mobile site */
+    
+    .image-wrapper {
+        width: 100% !important;
+        display: block;
+    }
+
+    .tooltip {
+        display: none;
     }
     
 /* Changes display for logo and navbar in mobile site */

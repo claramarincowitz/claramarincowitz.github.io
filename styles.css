@@ -1,16 +1,18 @@
 html {
-    overflow-y: scroll;
+    overflow-y: scroll; /* ensures that a vertical scrollbar is always present on the page */
 }
 
-body, h1, h2, h3, p {
-    margin: 0;
-    padding: 0;
+body, h1 { 
+    margin: 0; /*ensures that content displays to edge of page */
+    padding: 0; /*ensures that content displays to edge of page */
 }
 
 .container {
-    width: 100%;
+    width: 100%; /* creating responsive layouts or centering content within a page */
     margin: 0 auto;
 }
+
+/* Logo formatting */
 
 header h1 {
     margin: 0.1em 0; /* 0.5em */
@@ -29,6 +31,13 @@ header h1 img {
     justify-content: space-between; /* Distribute space between logo and nav */
     align-items: center; /* Center items vertically */
 }
+
+h1 {
+    font-size: 3em;
+    margin-top: 0.5em;
+}
+
+/* Navigation bar formatting */
 
 nav ul {
     display: flex;
@@ -51,132 +60,39 @@ nav ul li a {
     white-space: nowrap; 
 }
 
+/* Banner image formatting */
+
+main {
+    background: #fff; /* ensures a white background */
+}
+
 #banner img {
     max-width: 100%; /* This ensures the image is responsive and fits within its container */
     height: auto;
     margin-bottom: 100px
 }
 
-h1 {
-    font-size: 3em;
-    margin-top: 0.5em;
-}
-
-main {
-    background: #fff;
-}
+/* Country links formatting */
 
 .linked-images {
-    text-align: center
+    text-align: center;
 }
 
 .linked-images a {
-    /* display: inline-block*/
     margin-right: 30px;  /* Adds space between the images */
 }
 
-/* Removes margin from the last image */
-
-.linked-images a:last-child {
+.linked-images a:last-child { /* Removes margin from the last image */
     margin-right: 0;  
 }
 
 .linked-images img {
     max-width: 25%; 
     height: auto;
+    margin-bottom: 100px;
 }
 
-.role {
-    margin-bottom: 0px;
-}
-
-.role h3 {
-    font-size: 1.5em;
-    color: #000;
-    margin-bottom: 5px;
-    font-family: 'Work Sans', sans-serif; /* Using the imported Work Sans font */
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 100px
-}
-
-footer img {
-    width: 32px;
-    height: 32px;
-    margin: 0 10px;
-}
-
-/* ...previous CSS... */
-
-footer img {
-    width: 32px;
-    height: 32px;
-    margin: 0 10px;
-}
-
-/* Additional Styles */
-
-h2 {
-    padding-top: 100px;
-    text-align: center
-}
-
-h2 img {
-    max-width: 90%; /* This ensures the image is responsive and fits within its container */
-    height: auto; /* This maintains the aspect ratio of the image 
-    display: inline-block; /* This allows text-align center to work on the image */
-}
-
-
-/*DELETE LATER?
-
-/* Utility classes for images to be used in HTML */
-.img-placeholder {
-    background-color: #ccc;
-    width: 100%; /* Adjust as needed */
-    height: 200px; /* Adjust as needed */
-    display: block;
-    color: #333;
-    text-align: center;
-    line-height: 200px; /* Same as height to center text vertically */
-    font-size: 1em;
-    margin-bottom: 20px;
-}
-
-/* Responsive design adjustments */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    nav ul li a {
-        display: block;
-    }
-
-    .role {
-        padding: 10px;
-    }
-}
-*/
-
-.photos-content {
-    text-align: center;
-}
-
-.photos-content img {
-    display: block;
-    margin: 10px auto;
-}
-
-/* photo pages image formatting */
+/* Photo pages image formatting */
 
 .image-container {
     display: flex;
@@ -206,7 +122,7 @@ h2 img {
     height: auto;
 }
 
-/* Tooltip styles */
+/* tooltip styles */
 
 .image-wrapper {
     position: relative;
@@ -248,7 +164,7 @@ h2 img {
     opacity: 1;
 }
 
-/* about page text and image formatting */
+/* About page text and image formatting */
 
 .about-centered-image-container {
     display: flex;
@@ -352,6 +268,7 @@ h2 img {
     nav ul li a {
         font-size: 0.6em;
         padding: 5px 3px;
+        display: block;
     }
     
 /* changes display for country links in mobile site */
@@ -373,6 +290,7 @@ h2 img {
     .linked-images img {
         max-width: 100%;
         height: auto;
+        margin-bottom: 0px;
     }
     
 /* changes display for banners in mobile site */

@@ -80,6 +80,7 @@ main {
 
 .linked-images a {
     margin-right: 30px;  /* Adds space between the images */
+    text-decoration: none;
 }
 
 .linked-images a:last-child { /* Removes margin from the last image */

@@ -196,15 +196,18 @@ main {
     position: relative;
     display: inline-block;
     width: 30%; /* Match the width of side-by-side-image */
+    max-width: 500px; /* Prevents wrapper from outgrowing side-by-side images */
 }
 
 .centered-image-container .image-wrapper {
     width: 50%; /* Match the width of centered-image */
+    max-width: 800px; /* Prevents wrapper from outgrowing centered images */
 }
 
 .image-wrapper img {
     width: 100%;
     height: auto;
+    display: block; /* Removes tiny bottom whitespace gaps */
 }
 
 .tooltip {

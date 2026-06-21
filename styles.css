@@ -2,39 +2,42 @@ html {
     overflow-y: scroll; /* ensures that a vertical scrollbar is always present on the page */
 }
 
-body, h1 { 
+body,
+h1 {
     margin: 0; /*ensures that content displays to edge of page */
     padding: 0; /*ensures that content displays to edge of page */
 }
 
+/*
 .container {
-    width: 100%; /* creating responsive layouts or centering content within a page */
+    width: 100%;  creating responsive layouts or centering content within a page 
     margin: 0 auto;
 }
+*/
 
-/* Logo formatting */
+/* CLARA M logo formatting */
 
 header h1 {
     margin: 0.1em 0; /* 0.5em */
     margin-left: 20px;
+    margin-right: 20px;
     text-align: left; /* This will center the contents of the h1 tag */
-}
-
-header h1 img {
-    max-width: 30%; /* This ensures the image is responsive and fits within its container */
-    min-width: 220px;
-    height: auto; 
+    
 }
 
 .header-content {
     display: flex;
     justify-content: space-between; /* Distribute space between logo and nav */
     align-items: center; /* Center items vertically */
+    margin-top: 20px; /* Adjust this value (e.g., 20px, 60px) to get the gap you want */
+    margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 3em;
-    margin-top: 0.5em;
+    font-family: "Work Sans", sans-serif; /* Using the imported Work Sans font */
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+    color: #75b071;
 }
 
 /* Navigation bar formatting */
@@ -45,52 +48,118 @@ nav ul {
     padding: 0;
     margin: 0;
     align-items: center; /* Center items vertically if your nav has multiple lines */
+    
 }
 
-nav ul li {
+nav {
     display: inline;
     margin-right: 20px;
+    
+}
+
+ul li {
+    display: inline;
+    margin-right: 10px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #000;
-    font-family: 'Work Sans', sans-serif; /* Using the imported Work Sans font */
-    font-size: 0.75em;
-    white-space: nowrap; 
+    font-family: "Work Sans", sans-serif; /* Using the imported Work Sans font */
+    font-size: 0.8em;
+    letter-spacing: 0.15em;
+    white-space: nowrap;
+    
 }
 
-/* Banner image formatting */
+/* About page banner image formatting */
 
 main {
     background: #fff; /* ensures a white background */
 }
 
+#banner {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box; /* This is crucial: it forces padding inside the 100% width */
+}
+
 #banner img {
-    max-width: 100%; /* This ensures the image is responsive and fits within its container */
-    height: auto;
-    margin-bottom: 100px
+    max-width: 100%; /* Now 100% means 100% of the remaining inside space */
+    display: block; /* Fixes the 3px bottom gap */
+}
+
+#banner2 {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box; /* This is crucial: it forces padding inside the 100% width */
+}
+
+#banner2 img {
+    max-width: 100%; /* Now 100% means 100% of the remaining inside space */
+    display: block; /* Fixes the 3px bottom gap */
+}
+
+/* About page text formatting */
+
+.centered-text {
+    font-family: "Work Sans", sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center; 
+    letter-spacing: 0.15em;
+    color: #75b071;
+    text-transform: uppercase;
+    width: 60%; /* Keeps the box at 80% width and centers the box itself on the screen */
+    margin: 0 auto;
+    padding: 30px 0; /* Adds space at the top/bottom, keeps sides at 0 */
 }
 
 /* Country links formatting */
 
 .linked-images {
-    text-align: center;
+    display: grid;
+    /* This creates a responsive grid. Images will dynamically adjust, 
+       but will never shrink smaller than 250px. If they run out of room, 
+       they cleanly wrap to the next row while remaining perfectly aligned! */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px; 
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .linked-images a {
-    margin-right: 30px;  /* Adds space between the images */
-    text-decoration: none;
-}
-
-.linked-images a:last-child { /* Removes margin from the last image */
-    margin-right: 0;  
+    display: block;
+    width: 100%;
+    position: relative; /* anchors the text inside the link box */
 }
 
 .linked-images img {
-    max-width: 25%; 
-    height: auto;
-    margin-bottom: 100px;
+    width: 100%;   /* Scales perfectly to fill its grid cell */
+    height: auto; 
+    aspect-ratio: 1 / 1; /* Strictly forces a 1:1 perfect square ratio */
+    object-fit: contain; /* Ensures the full square is visible without a pixel of cropping */
+    display: block;
+}
+
+/* This section handles country name text placement and look */
+.country-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the text perfectly */
+    color: #fff;
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    pointer-events: none; 
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    padding: 0 10px;   /* adds padding around box */                 
+
 }
 
 /* Photo pages image formatting */
@@ -155,7 +224,7 @@ main {
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.3s;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-size: 14px;
     line-height: 1.4;
 }
@@ -165,63 +234,38 @@ main {
     opacity: 1;
 }
 
-/* About page text and image formatting */
-
-.about-centered-image-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px; /* Adds space between the top images and the centered image */
-    margin-bottom: 80px;
-}
-
-.about-centered-image {
-    width: 40%; /* Adjust this value to control the size of the centered image */
-    max-width: 800px; /* Optional: set a maximum width for larger screens */
-    height: auto;
-}
-
-.centered-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 0.9em;
-    text-align: center; 
-}
-
-.centered-text p {
-    max-width: 600px; /* Adjust this value to your desired width */
-    padding: 0 400px; /* This adds some padding on the sides */
-}
-
 /*MOBILE SITE*/
 
 @media screen and (max-width: 768px) {
-    
-/*Displays photos on mobile site underneath each other */
+    /*Displays photos on mobile site underneath each other */
+
+    .container {
+        width: 100%; /* creating responsive layouts or centering content within a page */
+        margin: 0 0;
+    }
     
     .image-container {
         flex-direction: column;
         gap: 10px;
-        margin-top: 10px;
-        margin-bottom: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box; /* This is crucial: it forces padding inside the 100% width */
     }
-    
+
     .centered-image-container {
-        margin-top: 10px; /* Adds space between the top images and the centered image */
-        margin-bottom: 0px;
-    }
-    
-    .side-by-side-image {
+        margin-top: 10px;
+        margin-bottom: 10px;
         width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box; /* This is crucial: it forces padding inside the 100% width */
     }
-    
-    .centered-image {
-        width: 100%;
-    }
-    
-/* remove tooltip from mobile site */
-    
+  
+    /* remove tooltip from mobile site */
+
     .image-wrapper {
         width: 100% !important;
         display: flex;
@@ -231,9 +275,9 @@ main {
     .tooltip {
         display: none;
     }
-    
-/* Changes display for logo and navbar in mobile site */
-    
+
+    /* Changes display for logo and navbar in mobile site */
+
     .header-content {
         flex-direction: column;
         align-items: center;
@@ -242,7 +286,7 @@ main {
     header h1 {
         margin: 10px 0;
         text-align: center;
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 
     header h1 img {
@@ -271,14 +315,14 @@ main {
         padding: 5px 3px;
         display: block;
     }
-    
-/* changes display for country links in mobile site */
-    
+
+    /* changes display for country links in mobile site */
+
     .linked-images {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 10px;
     }
 
     .linked-images a {
@@ -291,45 +335,23 @@ main {
     .linked-images img {
         max-width: 100%;
         height: auto;
-        margin-bottom: 0px;
-    }
-    
-/* changes display for banners in mobile site */
-    #banner img {
-        max-width: 100%; /* This ensures the image is responsive and fits within its container */
-        height: auto;
-        margin-top: 10px;
-        margin-bottom: 15px;
-    }
-    
-/* changes display for about content in mobile site */
-    
-    .about-centered-image-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px; /* Adds space between the top images and the centered image */
-        margin-bottom: 80px;
+        margin-bottom: 0;
     }
 
-    .about-centered-image {
-        width: 50%; /* Adjust this value to control the size of the centered image */
-        max-width: 800px; /* Optional: set a maximum width for larger screens */
-        height: auto;
-    }
+    /* changes display for about content in mobile site */
 
     .centered-text {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: 'Work Sans', sans-serif;
+        font-family: "Work Sans", sans-serif;
         font-size: 0.6em;
-        text-align: justify; /* This justifies the text */
+        text-align: center; /* This justifies the text */
+        padding: 10px 0; /* Adds space at the top/bottom, keeps sides at 0 */
     }
 
     .centered-text p {
         max-width: 600px; /* Adjust this value to your desired width */
-        padding: 0 50px; /* This adds some padding on the sides */    
+        padding: 0; /* This adds some padding on the sides */
     }
-
 }
-    
